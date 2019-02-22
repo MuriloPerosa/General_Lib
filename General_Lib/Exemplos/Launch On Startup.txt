@@ -1,0 +1,51 @@
+﻿Exemplo de código
+Adiciona a aplicação ao registro para iniciar junto ao windows.
+
+
+//OPÇÃO I
+using Microsoft.Win32;
+private void SetStartup()
+{
+	RegistryKey rk = Registry.CurrentUser.OpenSubKey
+		("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+	if (chkStartUp.Checked)
+		rk.SetValue(AppName, Application.ExecutablePath);
+	else
+		rk.DeleteValue(AppName,false);            
+}
+
+
+
+//OPÇÃO II
+static void Main(string[] args)
+{
+	string run = @"Software\Microsoft\Windows\CurrentVersion\Run";
+	Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(run, true);
+	string app_path = System.Reflection.Assembly.GetEntryAssembly().Location;
+	string app_name = System.Reflection.Assembly.GetEntryAssembly().ManifestModule.Name;
+	if (!key.GetValueNames().Contains(app_name))
+		key.SetValue(app_name, app_path);
+	key.Close();
+}
+
+
+
+
+//OPÇÃO III - Mais recomendada
+This is how you add an app to startup:
+
+// The path to the key where Windows looks for startup applications
+RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+if (!IsStartupItem())
+	// Add the value in the registry so that the application runs at startup
+	rkApp.SetValue("My app's name", Application.ExecutablePath.ToString());
+And to remove it:
+
+// The path to the key where Windows looks for startup applications
+RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+if(IsStartupItem())
+	// Remove the value from the registry so that the application doesn't start
+	rkApp.DeleteValue("My app's name", false);

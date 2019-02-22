@@ -1,0 +1,5 @@
+﻿// LINKS ÚTEIS PARA O DESENVOLVIMENTO
+
+ 1-  FORÇAR MODO DE ADMINISTRADOR
+
+ http://www.andrealveslima.com.br/blog/index.php/2018/06/20/como-forcar-o-modo-administrador-em-aplicaco

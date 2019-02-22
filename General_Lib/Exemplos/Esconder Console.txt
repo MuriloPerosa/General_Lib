@@ -1,0 +1,5 @@
+﻿// LINKS ÚTEIS PARA O DESENVOLVIMENTO
+
+ 1-  ESCONDER CONSOLE
+
+ - http://www.andrealveslima.com.br/blog/index.php/2018/02/28/como-podemos-esconder-o-console-de-uma-console-application/
