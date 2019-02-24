@@ -67,6 +67,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Exemplos\MS Windows Installer.txt" />
     <Content Include="Exemplos\Configurando o DateTimePicker.txt" />
     <Content Include="Exemplos\Esconder Console.txt" />
     <Content Include="Exemplos\Launch On Startup.txt" />
