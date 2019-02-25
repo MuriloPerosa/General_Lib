@@ -26,7 +26,7 @@ namespace General_Lib
 
         public static bool Pergunta(string texto)
         {
-            DialogResult result = System.Windows.Forms.MessageBox.Show(texto, "Peergunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = System.Windows.Forms.MessageBox.Show(texto, "Pergunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
