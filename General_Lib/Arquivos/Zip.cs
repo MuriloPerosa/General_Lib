@@ -10,18 +10,18 @@ namespace General_Lib.Arquivos
 {
     public class Zip
     {
-        public static bool Compress(List<string> fileList, string zipName, bool isDirStruct)
+        public static bool Zipar(List<string> arquivos, string arquivoZip, bool isDiretorio)
         {
             try
             {
                 using (var zip = new ZipFile(Encoding.Default))
                 {
-                    foreach (string path in fileList)
+                    foreach (string path in arquivos)
                     {
                         string fileName = Path.GetFileName(path);
                         if (Directory.Exists(path))
                         {
-                            if (isDirStruct)
+                            if (isDiretorio)
                             {
                                 zip.AddDirectory(path, fileName);
                             }
@@ -35,7 +35,7 @@ namespace General_Lib.Arquivos
                             zip.AddFile(path);
                         }
                     }
-                    zip.Save(zipName);
+                    zip.Save(arquivoZip);
                     return true;
                 }
             }

@@ -13,7 +13,7 @@ namespace TestLib
         {
             List<string> arquivos = new List<string>();
             arquivos.Add(@"C:\Users\Ma3268\Desktop\teste");
-            General_Lib.Arquivos.Zip.Compress(arquivos,@"C:\Users\Ma3268\Desktop\teste.zip", true);
+            General_Lib.Arquivos.Zip.Zipar(arquivos,@"C:\Users\Ma3268\Desktop\teste.zip", true);
             Arquivo.Move(@"C:\Users\Ma3268\Desktop\teste.zip", @"C:\Users\Ma3268\Desktop\teste\teste.zip");
         }
     }
