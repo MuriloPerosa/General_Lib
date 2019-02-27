@@ -5,3 +5,4 @@ c:\users\ma3268\documents\visual studio 2015\Projects\General_Lib\TestLib\bin\De
 c:\users\ma3268\documents\visual studio 2015\Projects\General_Lib\TestLib\obj\Debug\TestLib.csprojResolveAssemblyReference.cache
 c:\users\ma3268\documents\visual studio 2015\Projects\General_Lib\TestLib\obj\Debug\TestLib.dll
 c:\users\ma3268\documents\visual studio 2015\Projects\General_Lib\TestLib\obj\Debug\TestLib.pdb
+C:\Users\Ma3268\Documents\Visual Studio 2015\Projects\General_Lib\TestLib\bin\Debug\Ionic.Zip.dll

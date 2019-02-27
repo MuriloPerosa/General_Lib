@@ -8,3 +8,4 @@ C:\Users\Ma3268\Documents\Visual Studio 2015\Projects\General_Lib\General_Lib\ob
 C:\Users\Ma3268\Documents\Visual Studio 2015\Projects\General_Lib\General_Lib\obj\Debug\General_Lib_MarkupCompile.lref
 C:\Users\Ma3268\Documents\Visual Studio 2015\Projects\General_Lib\General_Lib\obj\Debug\UserInterface\PromptDialog.baml
 C:\Users\Ma3268\Documents\Visual Studio 2015\Projects\General_Lib\General_Lib\obj\Debug\General_Lib.g.resources
+C:\Users\Ma3268\Documents\Visual Studio 2015\Projects\General_Lib\General_Lib\bin\Debug\Ionic.Zip.dll

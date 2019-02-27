@@ -11,6 +11,11 @@ namespace General_Lib.Arquivos
     {
         public static void Escrever(string path, List<string> linhas)
         {
+            if (!File.Exists(path))
+            {
+                Arquivo.CreateAndClose(path);
+            }
+
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(path, false))
             {
                 foreach (var linha in linhas)
@@ -23,6 +28,13 @@ namespace General_Lib.Arquivos
 
         public static void EscreverCompletar(string path, List<string> linhas)
         {
+
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+            }
+
+
             List<string> textos = new List<string>();
             if (File.Exists(path))
             {

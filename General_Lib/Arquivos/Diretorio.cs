@@ -111,5 +111,33 @@ namespace General_Lib.Arquivos
             return retorno;
         }
 
+        public static void CopyAll(string from, string to)
+        {
+            //Now Create all of the directories
+            foreach (string dirPath in Directory.GetDirectories(from, "*",
+                SearchOption.AllDirectories))
+                Directory.CreateDirectory(dirPath.Replace(from, to));
+
+            //Copy all the files & Replaces any files with the same name
+            foreach (string newPath in Directory.GetFiles(from, "*.*",
+                SearchOption.AllDirectories))
+                File.Copy(newPath, newPath.Replace(from, to), true);
+        }
+
+        public static long GetDirectorySize(string diretorio, bool includeSubDir)
+        {
+
+            DirectoryInfo dInfo = new DirectoryInfo(diretorio);
+
+            long totalSize = dInfo.EnumerateFiles()
+                         .Sum(file => file.Length);
+            if (includeSubDir)
+            {
+                totalSize += dInfo.EnumerateDirectories()
+                         .Sum(dir => GetDirectorySize(dir.FullName, true));
+            }
+            return totalSize;
+        }
     }
 }
+

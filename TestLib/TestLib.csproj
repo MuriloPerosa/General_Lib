@@ -67,6 +67,7 @@
     <Compile Include="ArquivoTest.cs" />
     <Compile Include="DinheiroTest.cs" />
     <Compile Include="SistemaTest.cs" />
+    <Compile Include="ZipTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\General_Lib\General_Lib.csproj">
